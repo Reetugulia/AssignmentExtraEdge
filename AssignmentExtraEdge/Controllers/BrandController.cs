@@ -1,6 +1,7 @@
 ﻿using AssignmentExtraEdge.Model;
 using AssignmentExtraEdge.Repository;
 using AssignmentExtraEdge.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace AssignmentExtraEdge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BrandController : ControllerBase
     {
         private readonly IBrandService service;

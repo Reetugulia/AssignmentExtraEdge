@@ -1,5 +1,6 @@
 ﻿using AssignmentExtraEdge.Model;
 using AssignmentExtraEdge.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
@@ -8,6 +9,7 @@ namespace AssignmentExtraEdge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MobilePhoneController : ControllerBase
     {
         private readonly IMobilePhoneServices _mobileService;

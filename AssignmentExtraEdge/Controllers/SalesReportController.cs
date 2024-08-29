@@ -1,4 +1,5 @@
 ﻿using AssignmentExtraEdge.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,6 +7,7 @@ namespace AssignmentExtraEdge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SalesReportController : ControllerBase
     {
         private readonly ISalesReportService _salesReportService;
